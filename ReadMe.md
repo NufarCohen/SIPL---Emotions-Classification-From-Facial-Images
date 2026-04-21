@@ -29,6 +29,7 @@ You must update the `DATA_ROOT` variable to point to your local dataset director
 
 ```python
 DATA_ROOT = r"/path/to/your/dataset"
+```
 
 ### 2. Model Configuration & Customization (Important)
 By default, the pipeline is configured to use `convnext_xlarge` and `tf_efficientnet_b7` (based on the `timm` library). However, you have the **option to change these architectures** to experiment with different base models, such as ResNets or Vision Transformers.
