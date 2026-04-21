@@ -37,5 +37,3 @@ By default, the pipeline is configured to use `convnext_xlarge` and `tf_efficien
 If you choose to customize the models, you **must ensure** the model names match exactly across both scripts:
 1. **Base Trainer (`train_base_models_heterogeneous.py`)**: Update the `models_to_train` list with your chosen architectures.
 2. **Feature Extractor (`create_features_hetro.py`)**: Update the `model_configs` list to perfectly match the choices you made in step 1.
-
-*Note on current defaults: If you are running the default setup provided in this repository, please ensure the feature extractor string in `create_features_hetro.py` is updated from `tf_efficientnet_b4` to `tf_efficientnet_b7` before your first run so it properly loads the trained weights.*
