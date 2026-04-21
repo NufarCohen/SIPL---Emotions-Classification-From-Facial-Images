@@ -152,7 +152,7 @@ def train_specific_model(model_name, train_loader, val_loader, num_classes, save
 
 # ------------------------- Main -------------------------
 if __name__ == "__main__":
-    DATA_ROOT = r"/home/projects/sipl-prj10219/big_dataset_notUniform"
+    DATA_ROOT = r""
     MODELS_DIR = Path("./trained_hetero_models")
     MODELS_DIR.mkdir(exist_ok=True)
 

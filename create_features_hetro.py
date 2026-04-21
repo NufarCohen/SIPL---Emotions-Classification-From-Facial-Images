@@ -37,7 +37,7 @@ def extract_features(loader, models, device):
     return np.concatenate(all_feats), np.concatenate(all_labels)
 
 if __name__ == "__main__":
-    DATA_ROOT = r"/home/projects/sipl-prj10219/big_dataset_notUniform"
+    DATA_ROOT = r""
     MODELS_DIR = Path("./trained_hetero_models")
     FEATURE_DIR = Path("./hetero_features")
     FEATURE_DIR.mkdir(exist_ok=True)
