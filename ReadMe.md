@@ -18,11 +18,15 @@ Standalone scripts that independently train and evaluate the core architectures 
 
 Both scripts handles data splitting, augmentation and automatically generate and save training/validation loss graphs, accuracy plots, and confusion matrices upon completion.
 
-**`To train the ConvNeXt architecture`**
+#### To train the ConvNeXt architecture
+```python
 python convNeXt_model.py
+```
 
-**`To train the EfficientNet architecture`**
+#### To train the EfficientNet architecture
+```python
 python EfficientNet_model.py
+```
 
 ### Required Configuration Before Running
 
