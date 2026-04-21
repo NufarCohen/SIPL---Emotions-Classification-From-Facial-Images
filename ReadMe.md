@@ -9,22 +9,22 @@ The main goal is to address the challenge of emotion classification from facial 
 * **Utilize Data Augmentation** to balance and increase data diversity to improve generalization.
 * **Compare leading network architectures** and improve performance.
 
-## 🧠 Independent Base Model Training
+## Independent Base Model Training
 
-Standalone scripts that independently train and evaluate the core architectures used in this research:
+Standalone scripts that independently train and evaluate the core architectures used in Part 2 of the research (on the FER2013 Dataset):
 
 * **`convNeXt_model.py`**: Trains a ConvNeXt architecture (default: `convnext_xlarge`).
 * **`EfficientNet_model.py`**: Trains an EfficientNet architecture (default: `tf_efficientnet_b7`).
 
 Both scripts handles data splitting, augmentation and automatically generate and save training/validation loss graphs, accuracy plots, and confusion matrices upon completion.
 
-# To train the ConvNeXt architecture
+**`To train the ConvNeXt architecture`**
 python convNeXt_model.py
 
-# To train the EfficientNet architecture
+**`To train the EfficientNet architecture`**
 python EfficientNet_model.py
 
-## Required Configuration Before Running
+### Required Configuration Before Running
 
 ### 1. Dataset Path
 You must update the `data_root` variable to point to your local dataset directory in the main function for both files:
@@ -45,7 +45,7 @@ save_graphs(train_loss_history, val_loss_history, train_acc_history, val_acc_his
 By default, the standalone scripts are set to train specific model sizes (e.g., `convnext_xlarge` and `tf_efficientnet_b7`). If you want to experiment with a smaller or larger version of the architecture , you can easily change the `variant` variable.
 
 ## Stacking Ensemble
-## 📁 Pipeline Overview
+### 📁 Pipeline Overview
 
 The project is structured into four main scripts that must be run in sequence:
 
@@ -54,7 +54,7 @@ The project is structured into four main scripts that must be run in sequence:
 3.  **`train_meta_hetero.py`**: Trains an MLP Meta-Learner on the extracted features to produce the final ensemble prediction.
 4.  **`run_all_stacked_hetro.py`**: A master script that automates the entire 3-step pipeline.
 
-## ⚙️ Configuration & Setup
+### ⚙️ Configuration & Setup
 
 ### 1. Dataset Path
 You must update the `DATA_ROOT` variable to point to your local dataset directory in the following files:
