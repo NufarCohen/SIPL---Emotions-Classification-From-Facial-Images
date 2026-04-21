@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     train_loader, val_loader, test_loader, num_classes, _ = load_data(DATA_ROOT, batch_size=16, seed=42, run_id=1)
 
-    model_configs = ["convnext_xlarge", "tf_efficientnet_b4"]
+    model_configs = ["convnext_xlarge", "tf_efficientnet_b7"]
     loaded_models = []
     
     total_dim = 0
