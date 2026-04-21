@@ -9,7 +9,7 @@ The main goal is to address the challenge of emotion classification from facial 
 * **Utilize Data Augmentation** to balance and increase data diversity to improve generalization.
 * **Compare leading network architectures** and improve performance.
 
-**Stacking Ensemble**
+## Stacking Ensemble
 ## 📁 Pipeline Overview
 
 The project is structured into four main scripts that must be run in sequence:
