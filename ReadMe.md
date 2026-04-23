@@ -13,7 +13,7 @@ The main goal is to address the challenge of emotion classification from facial 
 
 This model is specifically designed for the first phase of the project.
 
-# How to Run the SAE Model
+### How to Run the SAE Model
 Run the script from your terminal using the following format:
 
 ```bash
@@ -69,7 +69,7 @@ save_graphs(train_loss_history, val_loss_history, train_acc_history, val_acc_his
 By default, the standalone scripts are set to train specific model sizes (e.g., `convnext_xlarge` and `tf_efficientnet_b7`). If you want to experiment with a smaller or larger version of the architecture , you can easily change the `variant` variable.
 
 ## Stacking Ensemble
-### 📁 Pipeline Overview
+### Pipeline Overview
 
 The project is structured into four main scripts that must be run in sequence:
 
@@ -78,7 +78,7 @@ The project is structured into four main scripts that must be run in sequence:
 3.  **`train_meta_hetero.py`**: Trains an MLP Meta-Learner on the extracted features to produce the final ensemble prediction.
 4.  **`run_all_stacked_hetro.py`**: A master script that automates the entire 3-step pipeline.
 
-### ⚙️ Configuration & Setup
+### Configuration & Setup
 
 ### 1. Dataset Path
 You must update the `DATA_ROOT` variable to point to your local dataset directory in the following files:
