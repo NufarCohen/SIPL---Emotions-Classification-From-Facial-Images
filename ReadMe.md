@@ -17,7 +17,7 @@ This model is specifically designed for the first phase of the project.
 Run the script from your terminal using the following format:
 
 ```bash
-python AutoEncoder.py --dataset_type small --data_dir "/path/to/your/dataset" --output_dir "./sae_results" --epochs 300
+python AutoEncoder.py --dataset_type small --data_dir "/path/to/your/dataset" --output_dir "./sae_results"
 ```
 
 *Command-Line Arguments:*
