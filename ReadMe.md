@@ -9,23 +9,23 @@ The main goal is to address the challenge of emotion classification from facial 
 * **Utilize Data Augmentation** to balance and increase data diversity to improve generalization.
 * **Compare leading network architectures** and improve performance.
 
-## 🧠 Part 1: Stacked Autoencoder (SAE)
+## Part 1: Stacked Autoencoder (SAE)
 
 This model is specifically designed for the first phase of the project.
 
-### 🚀 How to Run the SAE Model
+# How to Run the SAE Model
 Run the script from your terminal using the following format:
 
 ```bash
 python AutoEncoder.py --dataset_type small --data_dir "/path/to/your/dataset" --output_dir "./sae_results" --epochs 300
 ```
 
-#Command-Line Arguments:
-* **dataset_type (Required): Specify 'big' or 'small' to indicate the type of dataset you are loading.
+*Command-Line Arguments:*
+* dataset_type (Required): Specify 'big' or 'small' to indicate the type of dataset you are loading.
 
-* **data_dir (Required): The absolute or relative path to the root folder of your dataset.
+* data_dir (Required): The absolute or relative path to the root folder of your dataset.
 
-* **output_dir (Optional): The folder where the generated graphs and confusion matrices will be saved. Defaults to a folder named results in your current directory.
+* output_dir (Optional): The folder where the generated graphs and confusion matrices will be saved. Defaults to a folder named results in your current directory.
 
 ## Part 2:
 
