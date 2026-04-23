@@ -351,7 +351,7 @@ def save_graphs(train_loss, val_loss, train_acc, val_acc, out_path):
 # ------------------------- CLI Runner -------------------------
 def main():
     print("Start Calc")
-    data_root = r"/home/projects/sipl-prj10219/big_dataset_notUniform"
+    data_root = r""
     batch_size = 16
     variant = 'convnext_xlarge'  # 'convnext_tiny' | 'convnext_small' | 'convnext_base' | 'convnext_large'
     
