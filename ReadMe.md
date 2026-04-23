@@ -35,9 +35,9 @@ python AutoEncoder.py --dataset_type small --data_dir "/path/to/your/dataset" --
 
 Standalone scripts that independently train and evaluate the core architectures used in Part 2 of the research (on the FER2013 Dataset):
 
-* **`convNeXt_model.py`**: Trains a ConvNeXt architecture (default: `convnext_xlarge`).
-* **`EfficientNet_model.py`**: Trains an EfficientNet architecture (default: `tf_efficientnet_b7`).
-
+* **`convNeXt_model.py`**: Trains a ConvNeXt architecture (default variant: `convnext_xlarge`).
+* **`EfficientNet_model.py`**: Trains an EfficientNet architecture (default variant: `tf_efficientnet_b7`).
+ 
 Both scripts handles data splitting, augmentation and automatically generate and save training/validation loss graphs, accuracy plots, and confusion matrices upon completion.
 
 #### To train the ConvNeXt architecture
