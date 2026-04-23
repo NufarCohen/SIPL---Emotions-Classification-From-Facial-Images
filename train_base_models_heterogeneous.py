@@ -44,8 +44,8 @@ def load_data(data_dir, batch_size=64, seed=42, num_workers=4, run_id=0):
     mean = (0.485, 0.456, 0.406)
     std  = (0.229, 0.224, 0.225)
     img_size = 224
-
-    base_split_dir = Path(f"/home/projects/sipl-prj10219/stacked_models/")
+ 
+    base_split_dir = Path(f".")
     dup_dir_path = base_split_dir / "dataset_cpy_notUniform"
     split_out = base_split_dir / "final_split_dataset"
     data_root_dir = Path(data_dir)
