@@ -1,6 +1,8 @@
 # Facial Emotion Recognition (FER)
 The code represents research project conducted at the Signal and Image Processing Lab at the Technion - Israel Institute of Technology.
 
+<p align="center"><img src="https://github.com/user-attachments/assets/85ca6c46-3c56-42b6-b892-7e13356cf088" width="150" /><img src="https://github.com/user-attachments/assets/f930ecd1-8c10-4349-93a5-389d4f94ddbb" width="150" /><img src="https://github.com/user-attachments/assets/5da3d647-e6e3-4a22-855d-6cbd30e6d463" width="150" /></p>
+
 ## 🎯 Project Goals & Objectives
 
 The main goal is to address the challenge of emotion classification from facial images. The research focuses on the trade-off between small high-quality datasets and large but complex datasets.
