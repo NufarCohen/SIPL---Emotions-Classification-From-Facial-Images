@@ -68,6 +68,14 @@ save_graphs(train_loss_history, val_loss_history, train_acc_history, val_acc_his
 ### 3. Changing the Model Architecture (Variant)
 By default, the standalone scripts are set to train specific model sizes (e.g., `convnext_xlarge` and `tf_efficientnet_b7`). If you want to experiment with a smaller or larger version of the architecture , you can easily change the `variant` variable.
 
+## Smart Hard Voting
+As part of the ensemble evaluation phase, this repository includes an implementation of a **Smart Hard Voting** mechanism. This approach leverages the collective confidence of multiple independent model runs to improve overall classification accuracy and robustness.
+
+### Required Configuration Before Running
+
+1. **The Dataset Path:** The `data_root` path is currently empty. You must update it with the absolute path to your local dataset.
+2. **Number of Voting Models:** You can customize the `runs` parameter to change how many independent models are trained to participate in the ensemble vote (default is `5`).
+
 ## Stacking Ensemble
 ### Pipeline Overview
 
@@ -77,6 +85,11 @@ The project is structured into four main scripts that must be run in sequence:
 2.  **`create_features_hetro.py`**: Loads the trained base models, removes their classification heads, and extracts global features to create a new "Meta-Dataset."
 3.  **`train_meta_hetero.py`**: Trains an MLP Meta-Learner on the extracted features to produce the final ensemble prediction.
 4.  **`run_all_stacked_hetro.py`**: A master script that automates the entire 3-step pipeline.
+
+#### To train the ConvNeXt architecture
+```python
+python run_all_stacked_hetro.py
+```
 
 ### Configuration & Setup
 
