@@ -106,7 +106,7 @@ The project is structured into four main scripts that must be run in sequence:
 3.  **`train_meta_hetero.py`**: Trains an MLP Meta-Learner on the extracted features to produce the final ensemble prediction.
 4.  **`run_all_stacked_hetro.py`**: A master script that automates the entire 3-step pipeline.
 
-#### To train the ConvNeXt architecture
+#### To run Stacking Ensemble
 ```python
 python run_all_stacked_hetro.py
 ```
