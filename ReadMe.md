@@ -68,13 +68,33 @@ save_graphs(train_loss_history, val_loss_history, train_acc_history, val_acc_his
 ### 3. Changing the Model Architecture (Variant)
 By default, the standalone scripts are set to train specific model sizes (e.g., `convnext_xlarge` and `tf_efficientnet_b7`). If you want to experiment with a smaller or larger version of the architecture , you can easily change the `variant` variable.
 
+## Ensemble Voting Methods
+
 ## Smart Hard Voting
 As part of the ensemble evaluation phase, this repository includes an implementation of a **Smart Hard Voting** mechanism. This approach leverages the collective confidence of multiple independent model runs to improve overall classification accuracy and robustness.
+
+#### To run the Smart Hard Voting
+```python
+python ConvNext_Hard_Voting.py
+```
 
 ### Required Configuration Before Running
 
 1. **The Dataset Path:** The `data_root` path is currently empty. You must update it with the absolute path to your local dataset.
 2. **Number of Voting Models:** You can customize the `runs` parameter to change how many independent models are trained to participate in the ensemble vote (default is `5`).
+
+## Soft Voting
+This repository includes an implementation of a Soft Voting mechanism. Instead of counting absolute majority votes, this approach averages the probability distributions (Softmax outputs) of multiple models to leverage their collective confidence before making a final prediction.
+
+#### To run the Soft Voting
+```python
+python ConvNext_Soft_Voting.py
+```
+
+### Required Configuration Before Running:
+
+1. **The Dataset Path:** The `data_root` path is currently empty. You must update it with the absolute path to your local dataset.
+2. **Model Variants List:** You can customize the model_list array to change which, and how many, models participate in the ensemble (default is 5 instances of convnext_xlarge).
 
 ## Stacking Ensemble
 ### Pipeline Overview
