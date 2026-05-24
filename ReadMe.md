@@ -11,6 +11,23 @@ The main goal is to address the challenge of emotion classification from facial 
 * **Utilize Data Augmentation** to balance and increase data diversity to improve generalization.
 * **Compare leading network architectures** and improve performance.
 
+## 📁 Datasets Used
+
+This research leverages two primary facial emotion datasets:
+
+1. **[CK+ (Extended Cohn-Kanade)](https://www.kaggle.com/datasets/shawon10/ckplus)**: Utilized primarily during the first phase of the project for evaluating the Stacked Autoencoder (SAE) in controlled environments.
+2. **[FER2013](https://www.kaggle.com/datasets/msambare/fer2013?select=test)**: A larger, more complex dataset utilized for training the independent base architectures (ConvNeXt, EfficientNet) and the heterogeneous stacking ensemble.
+
+### Environment Setup
+
+Before running any of the scripts, you must install the required Python packages. All project dependencies are neatly organized in the `requirements.txt` file located in the `scripts` directory.
+
+To install them, open your terminal, navigate to the folder, and run `pip install`:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Part 1: Stacked Autoencoder (SAE)
 
 This model is specifically designed for the first phase of the project.
@@ -130,3 +147,7 @@ By default, the pipeline is configured to use `convnext_xlarge` and `tf_efficien
 If you choose to customize the models, you **must ensure** the model names match exactly across both scripts:
 1. **Base Trainer (`train_base_models_heterogeneous.py`)**: Update the `models_to_train` list with your chosen architectures.
 2. **Feature Extractor (`create_features_hetro.py`)**: Update the `model_configs` list to perfectly match the choices you made in step 1.
+
+## Utility: Data Augmentation (`augmentation_data.py`)
+This is a backend helper module imported automatically by the main training scripts. **Do not run it standalone.**<br>
+**Purpose:** It dynamically balances the training dataset by applying image transformations (flips, rotations, etc.).
