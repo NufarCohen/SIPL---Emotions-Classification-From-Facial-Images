@@ -137,3 +137,7 @@ By default, the pipeline is configured to use `convnext_xlarge` and `tf_efficien
 If you choose to customize the models, you **must ensure** the model names match exactly across both scripts:
 1. **Base Trainer (`train_base_models_heterogeneous.py`)**: Update the `models_to_train` list with your chosen architectures.
 2. **Feature Extractor (`create_features_hetro.py`)**: Update the `model_configs` list to perfectly match the choices you made in step 1.
+
+## Utility: Data Augmentation (`augmentation_data.py`)
+This is a backend helper module imported automatically by the main training scripts. **Do not run it standalone.**<br>
+**Purpose:** It dynamically balances the training dataset by applying image transformations (flips, rotations, etc.).
