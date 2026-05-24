@@ -17,7 +17,17 @@ This research leverages two primary facial emotion datasets:
 
 1. **[CK+ (Extended Cohn-Kanade)](https://www.kaggle.com/datasets/shawon10/ckplus)**: Utilized primarily during the first phase of the project for evaluating the Stacked Autoencoder (SAE) in controlled environments.
 2. **[FER2013](https://www.kaggle.com/datasets/msambare/fer2013?select=test)**: A larger, more complex dataset utilized for training the independent base architectures (ConvNeXt, EfficientNet) and the heterogeneous stacking ensemble.
-   
+
+### Environment Setup
+
+Before running any of the scripts, you must install the required Python packages. All project dependencies are neatly organized in the `requirements.txt` file located in the `scripts` directory.
+
+To install them, open your terminal, navigate to the folder, and run `pip install`:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Part 1: Stacked Autoencoder (SAE)
 
 This model is specifically designed for the first phase of the project.
