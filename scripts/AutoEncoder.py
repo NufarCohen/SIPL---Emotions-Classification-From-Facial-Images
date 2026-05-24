@@ -238,7 +238,6 @@ def main():
     parser.add_argument("--dataset_type", type=str, choices=['big', 'small'], required=True, help="Type of dataset to load ('big' or 'small').")
     parser.add_argument("--data_dir", type=str, required=True, help="Path to the main directory containing the dataset.")
     parser.add_argument("--output_dir", type=str, default="results", help="Directory to save output plots and matrices.")
-    parser.add_argument("--epochs", type=int, default=300, help="Number of training epochs.")
     args = parser.parse_args()
 
     if not os.path.exists(args.output_dir):
