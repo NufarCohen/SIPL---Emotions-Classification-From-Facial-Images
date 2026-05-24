@@ -11,6 +11,13 @@ The main goal is to address the challenge of emotion classification from facial 
 * **Utilize Data Augmentation** to balance and increase data diversity to improve generalization.
 * **Compare leading network architectures** and improve performance.
 
+## 📁 Datasets Used
+
+This research leverages two primary facial emotion datasets:
+
+1. **[CK+ (Extended Cohn-Kanade)](https://www.kaggle.com/datasets/shawon10/ckplus)**: Utilized primarily during the first phase of the project for evaluating the Stacked Autoencoder (SAE) in controlled environments.
+2. **[FER2013](https://www.kaggle.com/datasets/msambare/fer2013?select=test)**: A larger, more complex dataset utilized for training the independent base architectures (ConvNeXt, EfficientNet) and the heterogeneous stacking ensemble.
+   
 ## Part 1: Stacked Autoencoder (SAE)
 
 This model is specifically designed for the first phase of the project.
